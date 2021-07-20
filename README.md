@@ -20,14 +20,14 @@ Como utilizar:
 >As funcionalidades trabalham através de requisições http, portanto use um programa como o Postman.
   
 >Utilizando o Postman:
-  >Adicione a url(http://localhots:{port}) no Postman;
-  >Altere para o metodo POST;
-  >Na aba 'body' troque de 'none'para 'raw' e onde esta escrito 'text' troque para 'JSON'.
+  -Adicione a url(http://localhots:{port}) no Postman;  
+  -Altere para o metodo POST;  
+  -Na aba 'body' troque de 'none'para 'raw' e onde esta escrito 'text' troque para 'JSON'.  
     
 >Cadastro:
-  -Na url Utilize o metodo POST;
-  -Utilize (/api/cadastrar) ao final da url padrão;
-  -Vá em 'body' e passe as informações do usuario no formato:
+  -Na url Utilize o metodo POST;  
+  -Utilize (/api/cadastrar) ao final da url padrão;  
+  -Vá em 'body' e passe as informações do usuario no formato:  
       {
         "nome": "{Nome_usuario}",
         "email": "{Email_usuario}",
