@@ -16,7 +16,7 @@ O projeto se trata de uma API Rest que trabalha com o armazenamento de receitas.
   >Abra seu postgreSQL, vá até a database definida como destino, abra a query e exeute o comando "GRANT ALL PRIVILEGES ON TABLE tb_receitas TO {nome_usuario};
   >Agora sua maquina esta pronta para executar a API sem erros esperados.
 
-- Como utilizar:
+Como utilizar:
 >As funcionalidades trabalham através de requisições http, portanto use um programa como o Postman.
   
 >Utilizando o Postman:
