@@ -22,7 +22,8 @@ O projeto se trata de uma API Rest que trabalha com o armazenamento de receitas.
   >Utilizando o Postman:  
    -Adicione a url(http://localhots:{port}) no Postman;  
     -Altere para o metodo POST;  
-    -Na aba 'body' troque de 'none'para 'raw' e onde esta escrito 'text' troque para 'JSON'.  
+    -Na aba 'body' troque de 'none'para 'raw' e onde esta escrito 'text' troque para 'JSON';  
+    -Na aba de 'Authorization' bote 'Basic Auth'.
     
   >Cadastro:  
     -Na url Utilize o metodo POST;  
