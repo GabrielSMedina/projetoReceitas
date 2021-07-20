@@ -13,7 +13,7 @@ O projeto se trata de uma API Rest que trabalha com o armazenamento de receitas.
   >Abra o arquivo application.properties(receitasApiRest/src/main/resources) e adicionar os dados do banco de dados postgreSQL da sua maquina;  
   >Deixe sua database aberta;  
   >Execute a API para que ela crie as tabelas automaticamente e feche ela em seguida;  
-  >Abra seu postgreSQL, vá até a database definida como destino, abra a query e exeute o comando "GRANT ALL PRIVILEGES ON TABLE tb_receitas TO {nome_usuario};  
+  >Abra seu postgreSQL, vá até a database definida como destino, abra a query e execute o comando "GRANT ALL PRIVILEGES ON TABLE tb_receitas TO {nome_usuario};  
   >Agora sua maquina esta pronta para executar a API sem erros esperados.  
 
 - Como utilizar:  
