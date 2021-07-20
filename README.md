@@ -2,7 +2,7 @@
 O projeto se trata de uma API Rest que trabalha com o armazenamento de receitas.
 
 - Funcionalidades:  
-  >Cadastrar um novo usuario para ter acesso aos servicos;  
+  >Cadastrar um novo usuário para ter acesso aos servicos;  
   >Adicionar receitas ao banco de dados;  
   >Atualizar receitas no banco de dados;  
   >Deletar receitas no banco de dados pelo id;  
