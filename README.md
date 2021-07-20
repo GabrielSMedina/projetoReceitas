@@ -17,57 +17,57 @@ O projeto se trata de uma API Rest que trabalha com o armazenamento de receitas.
   >Agora sua maquina esta pronta para executar a API sem erros esperados.
 
 - Como utilizar:
-  >As funcionalidades trabalham através de requisições http, portanto use um programa como o Postman.
+>As funcionalidades trabalham através de requisições http, portanto use um programa como o Postman.
   
-  >Utilizando o Postman:
-    -Adicione a url(http://localhots:{port}) no Postman;
-    -Altere para o metodo POST;
-    -Na aba 'body' troque de 'none'para 'raw' e onde esta escrito 'text' troque para 'JSON'.
+>Utilizando o Postman:
+  -Adicione a url(http://localhots:{port}) no Postman;
+  -Altere para o metodo POST;
+  -Na aba 'body' troque de 'none'para 'raw' e onde esta escrito 'text' troque para 'JSON'.
     
-  >Cadastro:
-    -Na url Utilize o metodo POST;
-    -Utilize (/api/cadastrar) ao final da url padrão;
-    -Vá em 'body' e passe as informações do usuario no formato:
+>Cadastro:
+  -Na url Utilize o metodo POST;
+  -Utilize (/api/cadastrar) ao final da url padrão;
+  -Vá em 'body' e passe as informações do usuario no formato:
       {
         "nome": "{Nome_usuario}",
         "email": "{Email_usuario}",
         "senha": "{Senha_usuario}"
       }
-    -Clique em Send.
+  -Clique em Send.
     
-  >Adicionar receita:
-    -Na url Utilize o metodo POST;
-    -utilize (/api/receitas/adicionar) ao final da url padrão;
-    -Vá em 'body' e passe as informações da receita no formato:
+>Adicionar receita:
+  -Na url Utilize o metodo POST;
+  -utilize (/api/receitas/adicionar) ao final da url padrão;
+  -Vá em 'body' e passe as informações da receita no formato:
       {
         "nome": "{Nome_receita}",
         "ingredientes": "{Ingredientes_receita}",
         "modo_preparo": "{modo_praparo_receita}"
       }
-     -Clique em Send.
+   -Clique em Send.
       
-  >Atualizar receita:
-    -Na url Utilize o metodo PUT;
-    -utilize (/api/receitas/atualizar) ao final da url padrão;
-    -Vá em 'body' e passe as informações da receita no formato:
+>Atualizar receita:
+  -Na url Utilize o metodo PUT;
+  -utilize (/api/receitas/atualizar) ao final da url padrão;
+  -Vá em 'body' e passe as informações da receita no formato:
       {
         "nome": "{Nome_receita}",
         "ingredientes": "{Ingredientes_receita}",
         "modo_preparo": "{modo_praparo_receita}"
       }
-    -Clique em Send.
+  -Clique em Send.
       
-  >Deletar receita:
-    -Na url Utilize o metodo DELETE;
-    -utilize (/api/receitas/deletar/{id}) ao final da url padrão passando o id da receita que será deletada;
-    -Clique em Send.
+>Deletar receita:
+  -Na url Utilize o metodo DELETE;
+  -utilize (/api/receitas/deletar/{id}) ao final da url padrão passando o id da receita que será deletada;
+  -Clique em Send.
     
-  >Listar todas as receitas:
-    -Na url Utilize o metodo GET;
-    -utilize (/api/receitas/listar) ao final da url padrão;
-    -Clique em Send.
+>Listar todas as receitas:
+  -Na url Utilize o metodo GET;
+  -utilize (/api/receitas/listar) ao final da url padrão;
+  -Clique em Send.
     
-  >Buscar receita por id:
-    -Na url Utilize o metodo GET;
-    -utilize (/api/receitas/buscar/{id}) ao final da url padrão passando o id da receita que será mostrada;
-    -Clique em Send.
+>Buscar receita por id:
+  -Na url Utilize o metodo GET;
+  -utilize (/api/receitas/buscar/{id}) ao final da url padrão passando o id da receita que será mostrada;
+  -Clique em Send.
