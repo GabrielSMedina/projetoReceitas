@@ -16,7 +16,7 @@ import javax.validation.Valid
 class ReceitaController (val receitaService: ReceitaService){
 
     //Metodo para adicionar receitas
-    @PostMapping("/adicionar")
+    @PostMapping
     fun adicionarReceita(@Valid @RequestBody receitaDto: ReceitaDto, result: BindingResult): ResponseEntity<Response<ReceitaDto>>{
         val response: Response<ReceitaDto> = Response<ReceitaDto>()
         validarDadosExistentes(receitaDto, result)
@@ -43,7 +43,7 @@ class ReceitaController (val receitaService: ReceitaService){
     }
 
     //Metodo para atualizar receitas
-    @PutMapping("/atualizar")
+    @PutMapping
     fun atualizarReceita(@Valid @RequestBody receitaDto: ReceitaDto, result: BindingResult): ResponseEntity<Response<ReceitaDto>>{
         val response: Response<ReceitaDto> = Response<ReceitaDto>()
 
@@ -57,24 +57,8 @@ class ReceitaController (val receitaService: ReceitaService){
         return ResponseEntity.ok(response)
     }
 
-//    //Metodo para deletar por nome
-//    @DeleteMapping("/deletar/{nome}")
-//    fun deletar(@PathVariable("nome") nome: String): ResponseEntity<Response<String>> {
-//
-//        val response: Response<String> = Response<String>()
-//        val receita: Receita? = receitaService.buscarPorNome(nome)
-//
-//        if (receita == null) {
-//            response.erros.add("Não foi possivel remover a receita pois o registro nao foi encontrado")
-//            return ResponseEntity.badRequest().body(response)
-//        }
-//        val id = receita.id
-//        receitaService.deletar(id)
-//        return ResponseEntity.ok(Response<String>())
-//    }
-
     //Metodo para deletar receitas do banco de dados
-    @DeleteMapping("/deletar/{id}")
+    @DeleteMapping("/{id}")
     fun deletar(@PathVariable("id") id: Long): ResponseEntity<Response<Long>> {
         val response: Response<Long> = Response<Long>()
         val receita: Receita? = receitaService.buscarId(id)
@@ -89,13 +73,13 @@ class ReceitaController (val receitaService: ReceitaService){
     }
 
     //Metodo para listar todas as receitas
-    @GetMapping("/listar")
+    @GetMapping
     fun listar(): List<Receita>{
         return receitaService.listarTodas()
     }
 
     //Metodo para buscar uma receita pelo seu id
-    @GetMapping("/buscar/{id}")
+    @GetMapping("{id}")
     fun receitaPorid(@PathVariable("id") id: Long): ResponseEntity<Response<Receita>> {
 
         val response: Response<Receita> = Response<Receita>()
