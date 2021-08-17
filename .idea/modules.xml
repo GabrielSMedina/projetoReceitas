@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/receitasApiRest.iml" filepath="$PROJECT_DIR$/.idea/modules/receitasApiRest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/receitasApiRest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/receitasApiRest.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/receitasApiRest.test.iml" filepath="$PROJECT_DIR$/.idea/modules/receitasApiRest.test.iml" />
+    </modules>
+  </component>
+</project>
