@@ -1,4 +1,12 @@
 package com.gsmedina.receitasApiRest.models
 
-class Receitas_ingredientes {
-}
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+
+class Receitas_ingredientes (
+    val quantidade_ingrediente: Int,
+
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    val id: Long
+        )
