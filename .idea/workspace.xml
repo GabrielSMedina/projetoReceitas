@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2b9601-be17-4831-bb9d-4b762d055428" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/IngredientesDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitasDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/Receitas_ingredientesDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/UnidadesDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Ingredientes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Ingredientes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receitas.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receitas.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receitas_ingredientes.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receitas_ingredientes.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Unidades.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Unidades.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/v1_ingredientes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/v1_ingredientes.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
