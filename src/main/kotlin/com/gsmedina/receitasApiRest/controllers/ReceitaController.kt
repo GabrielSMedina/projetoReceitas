@@ -44,19 +44,19 @@ class ReceitaController (val receitaService: ReceitaService){
     }
 
     //Metodo para atualizar receitas
-    @PutMapping
-    fun atualizarReceita(@Valid @RequestBody receitaDto: ReceitaDto, result: BindingResult): ResponseEntity<Response<ReceitaDto>>{
-        val response: Response<ReceitaDto> = Response<ReceitaDto>()
-
-        if (result.hasErrors()) {
-            result.allErrors.forEach { erro -> erro.defaultMessage?.let { response.erros.add(it) } }
-            return ResponseEntity.badRequest().body(response)
-        }
-        val receita: Receita = DtoParaReceita(receitaDto, result)
-        receitaService.salvar(receita)
-        response.data = ReceitaParaDto(receita)
-        return ResponseEntity.ok(response)
-    }
+//    @PutMapping
+//    fun atualizarReceita(@Valid @RequestBody receitaDto: ReceitaDto, result: BindingResult): ResponseEntity<Response<ReceitaDto>>{
+//        val response: Response<ReceitaDto> = Response<ReceitaDto>()
+//
+//        if (result.hasErrors()) {
+//            result.allErrors.forEach { erro -> erro.defaultMessage?.let { response.erros.add(it) } }
+//            return ResponseEntity.badRequest().body(response)
+//        }
+//        val receita: Receita = DtoParaReceita(receitaDto, result)
+//        receitaService.salvar(receita)
+//        response.data = ReceitaParaDto(receita)
+//        return ResponseEntity.ok(response)
+//    }
 
     //Metodo para deletar receitas do banco de dados
     @DeleteMapping("/{id}")
@@ -95,7 +95,7 @@ class ReceitaController (val receitaService: ReceitaService){
         return ResponseEntity.ok(response)
     }
 
-    private fun ReceitaParaDto(receita: Receita): ReceitaDto = ReceitaDto(receita.nome, receita.ingredientes, receita.modo_preparo, receita.id)
-
-    private fun DtoParaReceita(receitaDto: ReceitaDto, result: BindingResult):Receita = Receita(receitaDto.nome, receitaDto.ingredientes, receitaDto.modo_preparo, receitaDto.id)
+//    private fun ReceitaParaDto(receita: Receita): ReceitaDto = ReceitaDto(receita.nome, receita.ingredientes, receita.modo_preparo, receita.id)
+//
+//    private fun DtoParaReceita(receitaDto: ReceitaDto, result: BindingResult):Receita = Receita(receitaDto.nome, receitaDto.ingredientes, receitaDto.modo_preparo, receitaDto.id)
 }
