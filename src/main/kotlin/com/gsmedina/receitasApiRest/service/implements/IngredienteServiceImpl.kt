@@ -15,7 +15,7 @@ class IngredienteServiceImpl(val ingredienteRepository: IngredienteRepository): 
         return ingredienteRepository.save(ingrediente)
     }
 
-    override fun listarTodas(): List<Ingrediente>? {
+    override fun listarTodosIngredientes(): List<Ingrediente>? {
         return ingredienteRepository.findAll()
     }
 

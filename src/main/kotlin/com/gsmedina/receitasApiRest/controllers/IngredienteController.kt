@@ -36,17 +36,9 @@ class IngredienteController(val ingredienteService: IngredienteService) {
         return ResponseEntity.ok(response)
     }
 
-    //Funcao para checar se existe um ingrediente com o mesmo nome
-    fun validarIngrediente(ingredienteDto: IngredienteDto, result: BindingResult){
-        val ingredienteNome: Ingrediente? = ingredienteService.buscarPorNome(ingredienteDto.nomeIngrediente)
-
-        if(ingredienteNome != null){
-            result.addError(ObjectError("ingrediente", "Ingrediente Ja existente"))
-        }
-    }
-
+    //Metodo para deletar Ingredientes do banco de dados
     @DeleteMapping("/{id}")
-    fun deletar(@PathVariable("id") id: Long): ResponseEntity<Response<Long>>{
+    fun deletarIngrediente(@PathVariable("id") id: Long): ResponseEntity<Response<Long>>{
         val response: Response<Long> = Response<Long>()
         val ingrediente: Ingrediente? = ingredienteService.buscarPorId(id)
 
@@ -61,8 +53,17 @@ class IngredienteController(val ingredienteService: IngredienteService) {
 
     //Metodo para listar todos os ingredientes existente dno banco de dados
     @GetMapping
-    fun listar(): List<Ingrediente>?{
-        return ingredienteService.listarTodas()
+    fun listarIngredientes(): List<Ingrediente>?{
+        return ingredienteService.listarTodosIngredientes()
+    }
+
+    //Funcao para checar se existe um ingrediente com o mesmo nome
+    fun validarIngrediente(ingredienteDto: IngredienteDto, result: BindingResult){
+        val ingredienteNome: Ingrediente? = ingredienteService.buscarPorNome(ingredienteDto.nomeIngrediente)
+
+        if(ingredienteNome != null){
+            result.addError(ObjectError("ingrediente", "Ingrediente Ja existente"))
+        }
     }
 
     //Funcao para transformar um IngredienteDto em um Ingrediente

@@ -8,7 +8,7 @@ interface IngredienteService {
 
     fun salvar(ingrediente: Ingrediente): Ingrediente
 
-    fun listarTodas(): List<Ingrediente>?
+    fun listarTodosIngredientes(): List<Ingrediente>?
 
     fun deletar(id: Long)
 
