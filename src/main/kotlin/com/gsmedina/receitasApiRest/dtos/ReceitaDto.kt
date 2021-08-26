@@ -7,10 +7,13 @@ import javax.validation.constraints.NotEmpty
 class ReceitaDto (
     @get:NotEmpty(message = "Nome nao pode ser vazio")
     @get:Length(min = 3, max = 255, message = "Nome deve conter no maximo 255 caracteres e no minimo 3")
-    val nome: String,
+    val nomeReceita: String,
 
-    @get:NotEmpty(message = "Ingredientes nao pode ser vazio")
-    val ingredientes: String,
+    @get:NotEmpty(message = "Minutos nao pode ser vazio")
+    val minutosPreparo: String,
+
+    @get:NotEmpty(message = "Porcoes nao pode ser vazio")
+    val porcoes: String,
 
     @get:NotEmpty(message = "Modo de preparo nao pode ser vazio")
     val modo_preparo: String,

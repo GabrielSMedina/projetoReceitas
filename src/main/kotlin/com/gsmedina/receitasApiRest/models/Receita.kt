@@ -6,12 +6,16 @@ import javax.persistence.*
 @Entity
 @Table(name = "receitas")
 class Receita (
-    val nome_receita: String,
-    val minutos_preparo: String,
+    @Column(name = "receitas")
+    val nomeReceita: String,
+    @Column(name = "minutos_preparo")
+    val minutosPreparo: String,
     val porcoes: String,
-    val modo_preparo: String,
+    @Column(name = "modo_preparo")
+    val modoPreparo: String,
 
+    @Column(name = "id_receita")
     //Geracao automatica do Id e definicao da Primary Key
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id_receita: Long
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val idReceita: Long
 )

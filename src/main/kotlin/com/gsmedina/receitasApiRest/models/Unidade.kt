@@ -7,6 +7,7 @@ import javax.persistence.*
 class Unidade (
     val unidade: String,
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id_unidade: Long
+    @Column(name = "id_unidade")
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val idUnidade: Long
         )

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service
 class ReceitaServiceImpl(val receitaRepository: ReceitaRepository): ReceitaService {
 
     override fun buscarPorNome(nome: String): Receita? {
-        return receitaRepository.findByNome(nome)
+        return receitaRepository.findByNomeReceita(nome)
     }
 
     override fun salvar(receita: Receita): Receita {
@@ -30,7 +30,7 @@ class ReceitaServiceImpl(val receitaRepository: ReceitaRepository): ReceitaServi
     }
 
     override fun listarPorNome(nome: String): Receita? {
-        return receitaRepository.findByNome(nome)
+        return receitaRepository.findByNomeReceita(nome)
     }
 
 }

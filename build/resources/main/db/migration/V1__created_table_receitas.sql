@@ -1,5 +1,5 @@
 CREATE TABLE receitas(
-    id_receita INTEGER PRIMARY KEY,
+    id_receita SERIAL PRIMARY KEY,
     nome_receita VARCHAR(255),
     minutos_preparo INTEGER,
     porcoes INTEGER,

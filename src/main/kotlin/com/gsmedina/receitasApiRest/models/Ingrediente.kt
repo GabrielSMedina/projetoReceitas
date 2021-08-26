@@ -6,9 +6,11 @@ import javax.persistence.*
 @Entity
 @Table(name = "ingredientes")
 class Ingrediente (
-    val nome_ingrediente: String,
+    @Column(name = "nome_ingrediente")
+    val nomeIngrediente: String,
 
+    @Column(name = "id_ingrediente")
     //Geracao automatica do Id e definicao da Primary Key
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id_ingrediente: Long
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val idIngrediente: Long
         )

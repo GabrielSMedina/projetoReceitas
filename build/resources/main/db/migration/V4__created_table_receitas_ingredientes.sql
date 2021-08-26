@@ -1,5 +1,5 @@
 CREATE TABLE receitas_ingredientes(
-    id_receita_ingrediente INTEGER PRIMARY KEY,
+    id_receita_ingrediente SERIAL PRIMARY KEY,
     id_receita INTEGER,
     id_ingrediente INTEGER,
     id_unidade INTEGER,
