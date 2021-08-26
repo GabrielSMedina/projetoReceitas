@@ -1,14 +1,14 @@
 package com.gsmedina.receitasApiRest.models
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import java.io.Serializable
+import javax.persistence.*
 
 @Entity
-class Ingredientes (
+@Table(name = "ingredientes")
+class Ingrediente (
     val nome_ingrediente: String,
 
+    //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long
+    val id_ingrediente: Long
         )

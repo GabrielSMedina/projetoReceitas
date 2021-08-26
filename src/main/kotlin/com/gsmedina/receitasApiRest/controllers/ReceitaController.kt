@@ -1,6 +1,6 @@
 package com.gsmedina.receitasApiRest.controllers
 
-import com.gsmedina.receitasApiRest.dtos.ReceitaDto
+import com.gsmedina.receitasApiRest.dtos.*
 import com.gsmedina.receitasApiRest.models.Receita
 import com.gsmedina.receitasApiRest.response.Response
 import com.gsmedina.receitasApiRest.service.ReceitaService
@@ -16,23 +16,24 @@ import javax.validation.Valid
 class ReceitaController (val receitaService: ReceitaService){
 
     //Metodo para adicionar receitas
-    @PostMapping
-    fun adicionarReceita(@Valid @RequestBody receitaDto: ReceitaDto, result: BindingResult): ResponseEntity<Response<ReceitaDto>>{
-        val response: Response<ReceitaDto> = Response<ReceitaDto>()
-        validarDadosExistentes(receitaDto, result)
-
-        //Validacao de erros, checa se os campos foram preenchidos como explicitado na classe dto
-        if (result.hasErrors()) {
-            result.allErrors.forEach { erro -> erro.defaultMessage?.let { response.erros.add(it) } }
-            return ResponseEntity.badRequest().body(response)
-        }
-        //Cria um objeto do tipo receita para que seja persistido no banco de dados
-        val receita: Receita = DtoParaReceita(receitaDto, result)
-        receitaService.salvar(receita)
-        //Cria um objeto dto para q ele seja retornado para o usuario
-        response.data = ReceitaParaDto(receita)
-        return ResponseEntity.ok(response)
-    }
+//    @PostMapping
+//    fun adicionarReceita(@Valid @RequestBody ingredientesDto: IngredientesDto, receitas_ingredientesDto: Receitas_ingredientesDto,
+//                         receitasDto: ReceitasDto, unidadesDto: UnidadesDto, result: BindingResult): ResponseEntity<Response<ReceitaDto>>{
+//        val response: Response<ReceitaDto> = Response<ReceitaDto>()
+//        validarDadosExistentes(receitaDto, result)
+//
+//        //Validacao de erros, checa se os campos foram preenchidos como explicitado na classe dto
+//        if (result.hasErrors()) {
+//            result.allErrors.forEach { erro -> erro.defaultMessage?.let { response.erros.add(it) } }
+//            return ResponseEntity.badRequest().body(response)
+//        }
+//        //Cria um objeto do tipo receita para que seja persistido no banco de dados
+//        val receita: Receita = DtoParaReceita(receitaDto, result)
+//        receitaService.salvar(receita)
+//        //Cria um objeto dto para q ele seja retornado para o usuario
+//        response.data = ReceitaParaDto(receita)
+//        return ResponseEntity.ok(response)
+//    }
 
 
     private fun validarDadosExistentes(receitaDto: ReceitaDto, result: BindingResult) {

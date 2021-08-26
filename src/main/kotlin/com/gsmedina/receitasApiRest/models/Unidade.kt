@@ -1,12 +1,12 @@
 package com.gsmedina.receitasApiRest.models
 
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
-class Unidades (
+@Entity
+@Table(name = "unidades")
+class Unidade (
     val unidade: String,
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
-    val id: Long
+    val id_unidade: Long
         )

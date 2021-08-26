@@ -3,10 +3,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.5.2"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id ("org.flywaydb.flyway") version "7.14.0"
 	kotlin("jvm") version "1.5.20"
 	kotlin("plugin.spring") version "1.5.20"
 	kotlin("plugin.jpa") version "1.5.20"
 }
+
 
 group = "com.gsmedina"
 version = "0.0.1-SNAPSHOT"
@@ -32,6 +34,7 @@ dependencies {
 	testImplementation("org.springframework.security:spring-security-test")
 }
 
+
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
@@ -42,3 +45,4 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
