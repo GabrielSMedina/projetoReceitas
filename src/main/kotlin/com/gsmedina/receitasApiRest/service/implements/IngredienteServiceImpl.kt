@@ -26,5 +26,4 @@ class IngredienteServiceImpl(val ingredienteRepository: IngredienteRepository): 
     override fun buscarPorId(id: Long): Ingrediente? {
         return ingredienteRepository.findById(id).get()
     }
-
 }

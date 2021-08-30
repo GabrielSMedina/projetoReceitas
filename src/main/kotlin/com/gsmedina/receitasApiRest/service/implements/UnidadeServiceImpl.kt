@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service
 @Service
 class UnidadeServiceImpl(val unidadeRepository: UnidadeRepository): UnidadeService {
     override fun buscarPorNome(nome: String): Unidade? {
-        return unidadeRepository.findByNomeUnidade(nome)
+        return unidadeRepository.findByUnidade(nome)
     }
 
     override fun salvar(unidade: Unidade): Unidade {

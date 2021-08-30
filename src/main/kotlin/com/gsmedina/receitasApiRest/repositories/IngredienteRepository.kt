@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 interface IngredienteRepository: JpaRepository<Ingrediente, Long> {
 
     fun findByNomeIngrediente(nomeIngrediente: String): Ingrediente?
+
 }
