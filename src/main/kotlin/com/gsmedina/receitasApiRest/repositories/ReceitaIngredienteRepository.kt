@@ -4,4 +4,6 @@ import com.gsmedina.receitasApiRest.models.ReceitaIngrediente
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface ReceitaIngredienteRepository: JpaRepository<ReceitaIngrediente, Long> {
+
+    fun findByidRecietaIngrediente(receitaIngrediente: ReceitaIngrediente): ReceitaIngrediente?
 }
