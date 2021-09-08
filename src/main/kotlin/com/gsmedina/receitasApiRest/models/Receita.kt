@@ -6,7 +6,7 @@ import javax.persistence.*
 @Entity
 @Table(name = "receitas")
 class Receita (
-    @Column(name = "receitas")
+    @Column(name = "nome_receita")
     val nomeReceita: String,
     @Column(name = "minutos_preparo")
     val minutosPreparo: String,

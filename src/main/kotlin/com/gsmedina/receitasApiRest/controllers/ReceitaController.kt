@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/api/receita")
+@RequestMapping("/api/receitas")
 class ReceitaController(val receitaService: ReceitaService, val ingredienteService: IngredienteService, val unidadeService: UnidadeService) {
 
     @PostMapping
@@ -39,6 +39,11 @@ class ReceitaController(val receitaService: ReceitaService, val ingredienteServi
         response.data = receitaParaDto(receita)
 
         return ResponseEntity.ok(response)
+    }
+
+    @GetMapping
+    fun listarReceitas(): List<Receita>{
+        return receitaService.listarTodas()
     }
 
     fun dtoParaReceita(receitaDto: ReceitaDto, result: BindingResult): Receita = Receita(receitaDto.nomeReceita, receitaDto.minutosPreparo,

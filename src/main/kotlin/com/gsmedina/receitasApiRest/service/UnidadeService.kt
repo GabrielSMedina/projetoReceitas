@@ -4,7 +4,7 @@ import com.gsmedina.receitasApiRest.models.Unidade
 
 interface UnidadeService {
 
-    fun buscarPorNome(nomeUnidade: String): Unidade?
+    fun buscarPorNome(nomeNomeUnidade: String): Unidade?
 
     fun salvar(unidade: Unidade): Unidade
 

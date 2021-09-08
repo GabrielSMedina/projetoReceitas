@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
 @RestController
-@RequestMapping("/api/ingrediente")
+@RequestMapping("/api/ingredientes")
 class IngredienteController(val ingredienteService: IngredienteService) {
 
     //Metodo para adicionar ingrediente

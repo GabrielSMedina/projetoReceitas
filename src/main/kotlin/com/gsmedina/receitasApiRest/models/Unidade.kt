@@ -5,6 +5,7 @@ import javax.persistence.*
 @Entity
 @Table(name = "unidades")
 class Unidade (
+    @Column(name = "unidade")
     val nomeUnidade: String,
 
     @Column(name = "id_unidade")

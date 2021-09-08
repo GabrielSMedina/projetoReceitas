@@ -3,5 +3,5 @@ CREATE TABLE receitas(
     nome_receita VARCHAR(255),
     minutos_preparo INTEGER,
     porcoes INTEGER,
-    modo_preparo JSON
+    modo_preparo TEXT
 );
