@@ -9,8 +9,8 @@ class Receita (
     @Column(name = "nome_receita")
     val nomeReceita: String,
     @Column(name = "minutos_preparo")
-    val minutosPreparo: String,
-    val porcoes: String,
+    val minutosPreparo: Int,
+    val porcoes: Int,
     @Column(name = "modo_preparo")
     val modoPreparo: String,
 

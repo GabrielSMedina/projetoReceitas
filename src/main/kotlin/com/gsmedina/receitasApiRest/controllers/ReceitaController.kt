@@ -47,7 +47,7 @@ class ReceitaController(val receitaService: ReceitaService, val ingredienteServi
     }
 
     fun dtoParaReceita(receitaDto: ReceitaDto, result: BindingResult): Receita = Receita(receitaDto.nomeReceita, receitaDto.minutosPreparo,
-    receitaDto.porcoes, receitaDto.modo_preparo, receitaDto.id)
+    receitaDto.porcoes, receitaDto.modoPreparo, receitaDto.id)
 
     fun receitaParaDto(receita: Receita): ReceitaDto = ReceitaDto(receita.nomeReceita, receita.minutosPreparo, receita.porcoes,
     receita.modoPreparo, receita.idReceita)

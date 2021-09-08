@@ -9,13 +9,11 @@ class ReceitaDto (
     @get:Length(min = 3, max = 255, message = "Nome deve conter no maximo 255 caracteres e no minimo 3")
     val nomeReceita: String,
 
-    @get:NotEmpty(message = "Minutos nao pode ser vazio")
-    val minutosPreparo: String,
+    val minutosPreparo: Int,
 
-    @get:NotEmpty(message = "Porcoes nao pode ser vazio")
-    val porcoes: String,
+    val porcoes: Int,
 
     @get:NotEmpty(message = "Modo de preparo nao pode ser vazio")
-    val modo_preparo: String,
+    val modoPreparo: String,
     val id: Long
         )

@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2b9601-be17-4831-bb9d-4b762d055428" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/IngredienteController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/IngredienteController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitaDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitaDto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receita.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receita.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Unidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Unidade.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/repositories/UnidadeRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/repositories/UnidadeRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/service/UnidadeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/service/UnidadeService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/service/implements/UnidadeServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/service/implements/UnidadeServiceImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
