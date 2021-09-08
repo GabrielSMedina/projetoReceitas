@@ -5,7 +5,7 @@ import javax.persistence.*
 @Entity
 @Table(name = "unidades")
 class Unidade (
-    val unidade: String,
+    val nomeUnidade: String,
 
     @Column(name = "id_unidade")
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

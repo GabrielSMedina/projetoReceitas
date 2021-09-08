@@ -52,14 +52,14 @@ class UnidadeController(val unidadeService: UnidadeService) {
     }
 
     fun validarUnidade(unidadeDto: UnidadeDto, result: BindingResult){
-        val unidadeNome: Unidade? = unidadeService.buscarPorNome(unidadeDto.unidade)
+        val unidadeNome: Unidade? = unidadeService.buscarPorNome(unidadeDto.nomeUnidade)
 
         if(unidadeNome != null){
             result.addError(ObjectError("Unidades", "Unidade nao encontrada"))
         }
     }
 
-    fun dtoParaUnidade(unidadeDto: UnidadeDto, result: BindingResult): Unidade = Unidade(unidadeDto.unidade, unidadeDto.idUnidade)
+    fun dtoParaUnidade(unidadeDto: UnidadeDto, result: BindingResult): Unidade = Unidade(unidadeDto.nomeUnidade, unidadeDto.idUnidade)
 
-    fun unidadeParaDto(unidade: Unidade): UnidadeDto = UnidadeDto(unidade.unidade, unidade.idUnidade)
+    fun unidadeParaDto(unidade: Unidade): UnidadeDto = UnidadeDto(unidade.nomeUnidade, unidade.idUnidade)
 }

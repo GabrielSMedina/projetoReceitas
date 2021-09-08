@@ -5,7 +5,7 @@ import javax.validation.constraints.NotEmpty
 
 class UnidadeDto (
     @get:NotEmpty(message = "Unidade nao pode ser vazio")
-    val unidade: String,
+    val nomeUnidade: String,
 
     val idUnidade: Long
 )
