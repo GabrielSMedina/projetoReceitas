@@ -36,9 +36,9 @@ class ReceitaIngredienteController(val receitaIngredienteService: ReceitaIngredi
     }
 
     fun dtoParaReceita(receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult):
-            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente, receitaIngredienteDto.idReceita,
-    receitaIngredienteDto.idIngrediente, receitaIngredienteDto.idUnidade, receitaIngredienteDto.id)
+            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente, receitaIngredienteDto.id,
+    receitaIngredienteDto.id, receitaIngredienteDto.id, receitaIngredienteDto.id)
 
     fun receitaParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(receitaIngrediente.quantidadeIngrediente,
-    receitaIngrediente.idReceita, receitaIngrediente.idIngrediente, receitaIngrediente.idUnidade, receitaIngrediente.idRecietaIngrediente)
+    receitaIngrediente.id, receitaIngrediente.id, receitaIngrediente.id, receitaIngrediente.id)
 }

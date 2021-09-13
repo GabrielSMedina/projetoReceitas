@@ -8,17 +8,18 @@ class ReceitaIngrediente (
     @Column(name = "quantidade_ingrediente")
     val quantidadeIngrediente: Int,
 
+    @OneToMany
     @Column(name = "id_receita")
-    val idReceita: Long,
+    val receita: Receita,
 
     @Column(name = "id_ingrediente")
-    val idIngrediente: Long,
+    val ingrediente: Ingrediente,
 
     @Column(name = "id_unidade")
-    val idUnidade: Long,
+    val unidade: Unidade,
 
-    @Column(name = "id_receita_ingrediente")
+    @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val idRecietaIngrediente: Long
+    val id: Long
         )

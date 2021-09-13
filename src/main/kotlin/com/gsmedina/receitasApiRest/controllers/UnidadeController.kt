@@ -59,7 +59,7 @@ class UnidadeController(val unidadeService: UnidadeService) {
         }
     }
 
-    fun dtoParaUnidade(unidadeDto: UnidadeDto, result: BindingResult): Unidade = Unidade(unidadeDto.nomeUnidade, unidadeDto.idUnidade)
+    fun dtoParaUnidade(unidadeDto: UnidadeDto, result: BindingResult): Unidade = Unidade(unidadeDto.nomeUnidade, unidadeDto.id)
 
-    fun unidadeParaDto(unidade: Unidade): UnidadeDto = UnidadeDto(unidade.nomeUnidade, unidade.idUnidade)
+    fun unidadeParaDto(unidade: Unidade): UnidadeDto = UnidadeDto(unidade.nomeUnidade, unidade.id)
 }

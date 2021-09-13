@@ -14,8 +14,11 @@ class Receita (
     @Column(name = "modo_preparo")
     val modoPreparo: String,
 
-    @Column(name = "id_receita")
+    @ManyToOne
+    val receitaIngredientes: List<ReceitaIngrediente>,
+
+    @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val idReceita: Long
+    val id: Long
 )

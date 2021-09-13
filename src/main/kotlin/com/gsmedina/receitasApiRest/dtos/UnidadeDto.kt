@@ -7,5 +7,5 @@ class UnidadeDto (
     @get:NotEmpty(message = "Unidade nao pode ser vazio")
     val nomeUnidade: String,
 
-    val idUnidade: Long
+    val id: Long
 )

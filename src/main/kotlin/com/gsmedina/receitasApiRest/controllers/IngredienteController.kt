@@ -67,9 +67,9 @@ class IngredienteController(val ingredienteService: IngredienteService) {
     }
 
     //Funcao para transformar um IngredienteDto em um Ingrediente
-    fun dtoParaIngrediente(ingredienteDto: IngredienteDto, result: BindingResult): Ingrediente = Ingrediente(ingredienteDto.nomeIngrediente, ingredienteDto.idIngrediente)
+    fun dtoParaIngrediente(ingredienteDto: IngredienteDto, result: BindingResult): Ingrediente = Ingrediente(ingredienteDto.nomeIngrediente, ingredienteDto.id)
 
     //Funcao para transformar um Ingrediente em um IngredieneteDto
-    fun ingredienteParaDto(ingrediente: Ingrediente): IngredienteDto = IngredienteDto(ingrediente.nomeIngrediente, ingrediente.idIngrediente)
+    fun ingredienteParaDto(ingrediente: Ingrediente): IngredienteDto = IngredienteDto(ingrediente.nomeIngrediente, ingrediente.id)
 
 }

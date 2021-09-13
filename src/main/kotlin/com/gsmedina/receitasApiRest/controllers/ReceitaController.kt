@@ -1,19 +1,13 @@
 package com.gsmedina.receitasApiRest.controllers
 
-import com.gsmedina.receitasApiRest.dtos.IngredienteDto
-import com.gsmedina.receitasApiRest.dtos.JuncaoDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaDto
-import com.gsmedina.receitasApiRest.dtos.UnidadeDto
-import com.gsmedina.receitasApiRest.models.Ingrediente
 import com.gsmedina.receitasApiRest.models.Receita
-import com.gsmedina.receitasApiRest.models.Unidade
 import com.gsmedina.receitasApiRest.response.Response
 import com.gsmedina.receitasApiRest.service.IngredienteService
 import com.gsmedina.receitasApiRest.service.ReceitaService
 import com.gsmedina.receitasApiRest.service.UnidadeService
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.BindingResult
-import org.springframework.validation.ObjectError
 import org.springframework.web.bind.annotation.*
 import javax.validation.Valid
 
