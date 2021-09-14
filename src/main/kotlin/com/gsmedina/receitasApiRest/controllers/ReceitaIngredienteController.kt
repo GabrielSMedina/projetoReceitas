@@ -1,6 +1,9 @@
 package com.gsmedina.receitasApiRest.controllers
 
+import com.gsmedina.receitasApiRest.dtos.IngredienteDto
+import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaIngredienteDto
+import com.gsmedina.receitasApiRest.dtos.UnidadeDto
 import com.gsmedina.receitasApiRest.models.ReceitaIngrediente
 import com.gsmedina.receitasApiRest.response.Response
 import com.gsmedina.receitasApiRest.service.ReceitaIngredienteService
@@ -17,7 +20,9 @@ import javax.validation.Valid
 class ReceitaIngredienteController(val receitaIngredienteService: ReceitaIngredienteService) {
 
     @PostMapping
-    fun relacionarDados(@Valid @RequestBody receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult): ResponseEntity<Response<ReceitaIngredienteDto>>{
+    fun relacionarDados(@Valid @RequestBody receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult):
+            ResponseEntity<Response<ReceitaIngredienteDto>>{
+
         val response: Response<ReceitaIngredienteDto> = Response<ReceitaIngredienteDto>()
 
         if(result.hasErrors()){
@@ -36,9 +41,11 @@ class ReceitaIngredienteController(val receitaIngredienteService: ReceitaIngredi
     }
 
     fun dtoParaReceita(receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult):
-            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente, receitaIngredienteDto.id,
-    receitaIngredienteDto.id, receitaIngredienteDto.id, receitaIngredienteDto.id)
+            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente,
+        receitaIngredienteDto.receita, receitaIngredienteDto.ingrediente, receitaIngredienteDto.unidade ,
+        receitaIngredienteDto.id)
 
-    fun receitaParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(receitaIngrediente.quantidadeIngrediente,
-    receitaIngrediente.id, receitaIngrediente.id, receitaIngrediente.id, receitaIngrediente.id)
+    fun receitaParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(
+        receitaIngrediente.quantidadeIngrediente, receitaIngrediente.receita, receitaIngrediente.ingrediente,
+        receitaIngrediente.unidade, receitaIngrediente.id)
 }

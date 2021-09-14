@@ -13,11 +13,11 @@ class ReceitaIngredienteDto (
 
     val quantidadeIngrediente: Int,
 
-    val idReceita: Long,
+    val receita: Receita,
 
-    val idIngrediente: Long,
+    val ingrediente: Ingrediente,
 
-    val idUnidade: Long,
+    val unidade: Unidade,
 
     val id: Long
 )

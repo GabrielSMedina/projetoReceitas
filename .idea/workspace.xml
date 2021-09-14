@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a2b9601-be17-4831-bb9d-4b762d055428" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaIngredienteController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaIngredienteController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/UnidadeController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/UnidadeController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/IngredienteDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/IngredienteDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/JuncaoDto.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitaIngredienteDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitaIngredienteDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/UnidadeDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/UnidadeDto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Ingrediente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Ingrediente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Juncao.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receita.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Receita.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/ReceitaIngrediente.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/ReceitaIngrediente.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Unidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/models/Unidade.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__created_table_receitas.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__created_table_receitas.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__created_table_ingredientes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__created_table_ingredientes.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V3__created_table_unidades.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__created_table_unidades.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V4__created_table_receitas_ingredientes.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V4__created_table_receitas_ingredientes.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
