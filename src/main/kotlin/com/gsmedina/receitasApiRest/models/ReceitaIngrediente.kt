@@ -8,14 +8,16 @@ class ReceitaIngrediente (
     @Column(name = "quantidade_ingrediente")
     val quantidadeIngrediente: Int,
 
-    @OneToMany
-    @Column(name = "id_receita")
+    @ManyToOne
+    @JoinColumn(name = "id_receita")
     val receita: Receita,
 
-    @Column(name = "id_ingrediente")
+    @ManyToOne
+    @JoinColumn(name = "id_ingrediente")
     val ingrediente: Ingrediente,
 
-    @Column(name = "id_unidade")
+    @ManyToOne
+    @JoinColumn(name = "id_unidade")
     val unidade: Unidade,
 
     @Column(name = "id")

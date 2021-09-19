@@ -1,14 +1,14 @@
 CREATE TABLE receitas_ingredientes(
-    id_receita_ingrediente SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     id_receita INTEGER,
     id_ingrediente INTEGER,
     id_unidade INTEGER,
     quantidade_ingrediente REAL,
 
     FOREIGN KEY(id_receita)
-        REFERENCES receitas(id_receita),
+        REFERENCES receitas(id),
     FOREIGN KEY(id_ingrediente)
-        REFERENCES ingredientes(id_ingrediente),
+        REFERENCES ingredientes(id),
     FOREIGN KEY(id_unidade)
-        REFERENCES unidades(id_unidade)
+        REFERENCES unidades(id)
 );
