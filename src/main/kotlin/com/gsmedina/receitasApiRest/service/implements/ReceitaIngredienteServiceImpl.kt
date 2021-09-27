@@ -11,7 +11,7 @@ class ReceitaIngredienteServiceImpl(val receitaIngredienteRepository: ReceitaIng
         return receitaIngredienteRepository.save(receitaIngrediente)
     }
 
-    override fun buscarPorId(receitaIngrediente: ReceitaIngrediente): ReceitaIngrediente? {
-        return receitaIngredienteRepository.findByidRecietaIngrediente(receitaIngrediente)
+    override fun buscarPorId(id: Long): ReceitaIngrediente? {
+        return receitaIngredienteRepository.findByid(id)
     }
 }

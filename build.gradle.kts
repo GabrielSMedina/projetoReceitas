@@ -9,7 +9,6 @@ plugins {
 	kotlin("plugin.jpa") version "1.5.20"
 }
 
-
 group = "com.gsmedina"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -29,6 +28,7 @@ dependencies {
     implementation("org.projectlombok:lombok:1.18.20")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("org.postgresql:postgresql")
+	implementation("javax.xml.bind:jaxb-api:2.3.0-b170201.1204")
 }
 
 

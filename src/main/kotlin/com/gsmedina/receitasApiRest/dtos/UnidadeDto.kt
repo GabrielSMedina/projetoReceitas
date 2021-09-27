@@ -1,6 +1,5 @@
 package com.gsmedina.receitasApiRest.dtos
 
-import org.hibernate.validator.constraints.Length
 import javax.validation.constraints.NotEmpty
 
 class UnidadeDto (

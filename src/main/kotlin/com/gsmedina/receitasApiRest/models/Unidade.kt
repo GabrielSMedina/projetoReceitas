@@ -1,5 +1,6 @@
 package com.gsmedina.receitasApiRest.models
 
+import java.io.Serializable
 import javax.persistence.*
 
 @Entity
@@ -11,4 +12,4 @@ class Unidade (
     @Column(name = "id")
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long
-        )
+        ): Serializable

@@ -1,9 +1,6 @@
 package com.gsmedina.receitasApiRest.controllers
 
-import com.gsmedina.receitasApiRest.dtos.IngredienteDto
-import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaIngredienteDto
-import com.gsmedina.receitasApiRest.dtos.UnidadeDto
 import com.gsmedina.receitasApiRest.models.ReceitaIngrediente
 import com.gsmedina.receitasApiRest.response.Response
 import com.gsmedina.receitasApiRest.service.ReceitaIngredienteService

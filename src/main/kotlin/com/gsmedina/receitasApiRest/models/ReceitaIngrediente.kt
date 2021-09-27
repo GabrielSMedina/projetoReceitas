@@ -1,5 +1,6 @@
 package com.gsmedina.receitasApiRest.models
 
+import java.io.Serializable
 import javax.persistence.*
 
 @Entity
@@ -24,4 +25,4 @@ class ReceitaIngrediente (
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long
-        )
+        ): Serializable

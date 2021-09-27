@@ -7,5 +7,5 @@ interface ReceitaIngredienteService {
 
     fun salvar(receitaIngrediente: ReceitaIngrediente): ReceitaIngrediente
 
-    fun buscarPorId(receitaIngrediente: ReceitaIngrediente): ReceitaIngrediente?
+    fun buscarPorId(id: Long): ReceitaIngrediente?
 }
