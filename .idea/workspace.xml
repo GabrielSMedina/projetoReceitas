@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0a2b9601-be17-4831-bb9d-4b762d055428" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/ReceitasApiRestApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/ReceitasApiRestApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaIngredienteController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaIngredienteController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitaIngredienteDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/dtos/ReceitaIngredienteDto.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,5 +131,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/gsmedina/receitasApiRest/controllers/ReceitaIngredienteController.kt</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

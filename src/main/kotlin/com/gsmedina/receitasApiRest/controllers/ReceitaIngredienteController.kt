@@ -27,22 +27,22 @@ class ReceitaIngredienteController(val receitaIngredienteService: ReceitaIngredi
             return ResponseEntity.badRequest().body(response)
         }
 
-        //Cria um objeto do tipo receitaIngrediente para ser persistido no banco de dados
-        val receitaIngrediente: ReceitaIngrediente = dtoParaReceita(receitaIngredienteDto, result)
-        receitaIngredienteService.salvar(receitaIngrediente)
+//        //Cria um objeto do tipo receitaIngrediente para ser persistido no banco de dados
+//        val receitaIngrediente: ReceitaIngrediente = dtoParaReceita(receitaIngredienteDto, result)
+//        receitaIngredienteService.salvar(receitaIngrediente)
+//
+//        //Cria um objeto que sera retornado para o usuario, sendo este objeto um Dto
+//        response.data = receitaParaDto(receitaIngrediente)
 
-        //Cria um objeto que sera retornado para o usuario, sendo este objeto um Dto
-        response.data = receitaParaDto(receitaIngrediente)
-
-        return ResponseEntity.ok(response)
+        return ResponseEntity.ok(null)
     }
 
-    fun dtoParaReceita(receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult):
-            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente,
-        receitaIngredienteDto.receita, receitaIngredienteDto.ingrediente, receitaIngredienteDto.unidade ,
-        receitaIngredienteDto.id)
+//    fun dtoParaReceita(receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult):
+//            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente,
+//        receitaIngredienteDto.receita, receitaIngredienteDto.ingrediente, receitaIngredienteDto.unidade ,
+//        receitaIngredienteDto.id)
 
-    fun receitaParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(
-        receitaIngrediente.quantidadeIngrediente, receitaIngrediente.receita, receitaIngrediente.ingrediente,
-        receitaIngrediente.unidade, receitaIngrediente.id)
+//    fun receitaParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(
+//        receitaIngrediente.quantidadeIngrediente, receitaIngrediente.receita, receitaIngrediente.ingrediente,
+//        receitaIngrediente.unidade, receitaIngrediente.id)
 }
