@@ -1,11 +1,12 @@
 package com.gsmedina.receitasApiRest.models
 
+import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import java.io.Serializable
 import javax.persistence.*
 
 @Entity
 @Table(name = "receitas_ingredientes")
-class ReceitaIngrediente (
+class ReceitaIngrediente(
     @Column(name = "quantidade_ingrediente")
     val quantidadeIngrediente: Int,
 

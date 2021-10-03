@@ -1,5 +1,6 @@
 package com.gsmedina.receitasApiRest.dtos
 
+import com.gsmedina.receitasApiRest.models.ReceitaIngrediente
 import org.hibernate.validator.constraints.Length
 import javax.validation.constraints.NotEmpty
 
@@ -15,5 +16,8 @@ class ReceitaDto (
 
     @get:NotEmpty(message = "Modo de preparo nao pode ser vazio")
     val modoPreparo: String,
+
+    val receitaIngredientes: List<ReceitaIngrediente>,
+
     val id: Long
         )

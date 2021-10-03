@@ -1,7 +1,13 @@
 package com.gsmedina.receitasApiRest.controllers
 
+import com.gsmedina.receitasApiRest.dtos.IngredienteDto
+import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaIngredienteDto
+import com.gsmedina.receitasApiRest.dtos.UnidadeDto
+import com.gsmedina.receitasApiRest.models.Ingrediente
+import com.gsmedina.receitasApiRest.models.Receita
 import com.gsmedina.receitasApiRest.models.ReceitaIngrediente
+import com.gsmedina.receitasApiRest.models.Unidade
 import com.gsmedina.receitasApiRest.response.Response
 import com.gsmedina.receitasApiRest.service.ReceitaIngredienteService
 import org.springframework.http.ResponseEntity
@@ -27,22 +33,34 @@ class ReceitaIngredienteController(val receitaIngredienteService: ReceitaIngredi
             return ResponseEntity.badRequest().body(response)
         }
 
-//        //Cria um objeto do tipo receitaIngrediente para ser persistido no banco de dados
-//        val receitaIngrediente: ReceitaIngrediente = dtoParaReceita(receitaIngredienteDto, result)
-//        receitaIngredienteService.salvar(receitaIngrediente)
-//
-//        //Cria um objeto que sera retornado para o usuario, sendo este objeto um Dto
-//        response.data = receitaParaDto(receitaIngrediente)
+        val receita: Receita = dtoParaReceita(receitaIngredienteDto.receita)
+        val ingrediente : Ingrediente = dtoParaIngrediente(receitaIngredienteDto.ingrediente)
+        val unidade: Unidade = dtoParaUnidade(receitaIngredienteDto.unidade)
 
-        return ResponseEntity.ok(null)
+        //Cria um objeto do tipo receitaIngrediente para ser persistido no banco de dados
+        val receitaIngrediente: ReceitaIngrediente = dtoParaReceitaIngrediente(receitaIngredienteDto, receita, ingrediente, unidade, result)
+        receitaIngredienteService.salvar(receitaIngrediente)
+
+        //Cria um objeto que sera retornado para o usuario, sendo este objeto um Dto
+        //response.data = receitaIngredienteParaDto(receitaIngrediente)
+
+        response.data = receitaIngredienteDto
+
+        return ResponseEntity.ok(response)
     }
 
-//    fun dtoParaReceita(receitaIngredienteDto: ReceitaIngredienteDto, result: BindingResult):
-//            ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente,
-//        receitaIngredienteDto.receita, receitaIngredienteDto.ingrediente, receitaIngredienteDto.unidade ,
-//        receitaIngredienteDto.id)
+    fun dtoParaReceitaIngrediente(receitaIngredienteDto: ReceitaIngredienteDto, receita: Receita, ingrediente: Ingrediente,
+                                  unidade: Unidade, result: BindingResult): ReceitaIngrediente =
+        ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente, receita, ingrediente, unidade, receitaIngredienteDto.id)
 
-//    fun receitaParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(
+//    fun receitaIngredienteParaDto(receitaIngrediente: ReceitaIngrediente): ReceitaIngredienteDto = ReceitaIngredienteDto(
 //        receitaIngrediente.quantidadeIngrediente, receitaIngrediente.receita, receitaIngrediente.ingrediente,
 //        receitaIngrediente.unidade, receitaIngrediente.id)
+
+    fun dtoParaReceita(receita: ReceitaDto): Receita = Receita(receita.nomeReceita, receita.minutosPreparo, receita.porcoes,
+    receita.modoPreparo, receita.receitaIngredientes, receita.id)
+
+    fun dtoParaIngrediente(ingrediente: IngredienteDto): Ingrediente = Ingrediente(ingrediente.nomeIngrediente, ingrediente.id)
+
+    fun dtoParaUnidade(unidade: UnidadeDto): Unidade = Unidade(unidade.nomeUnidade, unidade.id)
 }
