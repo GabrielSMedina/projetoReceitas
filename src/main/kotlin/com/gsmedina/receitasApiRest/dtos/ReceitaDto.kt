@@ -17,7 +17,8 @@ class ReceitaDto (
     @get:NotEmpty(message = "Modo de preparo nao pode ser vazio")
     val modoPreparo: String,
 
-    val receitaIngredientes: List<ReceitaIngrediente>,
+    //Retirei a ReceitaIngredienteDto de dentro da list para resolver um conflito, vejamos no que vai dar
+    val receitaIngredientes: List<ReceitaIngredienteDto>,
 
     val id: Long
         )

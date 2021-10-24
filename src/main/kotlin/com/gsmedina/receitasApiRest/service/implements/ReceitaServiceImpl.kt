@@ -1,5 +1,6 @@
 package com.gsmedina.receitasApiRest.service.implements
 
+import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import com.gsmedina.receitasApiRest.models.Receita
 import com.gsmedina.receitasApiRest.repositories.ReceitaRepository
 import com.gsmedina.receitasApiRest.service.ReceitaService
@@ -13,8 +14,11 @@ class ReceitaServiceImpl(val receitaRepository: ReceitaRepository): ReceitaServi
         return receitaRepository.findByNomeReceita(nome)
     }
 
-    override fun salvar(receita: Receita): Receita {
-        return receitaRepository.save(receita)
+    override fun salvar(receitaDto: ReceitaDto): Receita {
+        return receitaRepository.save(Receita(
+            receitaDto.nomeReceita, receitaDto.minutosPreparo, receitaDto.porcoes, receitaDto.modoPreparo,
+            receitaDto.receitaIngredientes, receitaDto.id
+        ))
     }
 
     override fun deletar(id: Long) {
