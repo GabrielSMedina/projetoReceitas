@@ -7,7 +7,7 @@ import javax.persistence.*
 @Table(name = "receitas")
 class Receita(
     @Column(name = "nome_receita")
-    val nomeReceita: String,
+    var nomeReceita: String,
     @Column(name = "minutos_preparo")
     val minutosPreparo: Int,
     val porcoes: Int,
@@ -15,7 +15,7 @@ class Receita(
     val modoPreparo: String,
 
     @OneToMany(mappedBy = "receita")
-    val receitaIngredientes: List<ReceitaIngrediente> = ArrayList(),
+    val receitaIngredientes: List<ReceitaIngrediente>,
 
     @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
