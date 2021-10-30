@@ -36,22 +36,8 @@ class ReceitaController (val receitaService: ReceitaService, val ingredienteServ
             return ResponseEntity.badRequest().body(response)
         }
 
-        val lri= mutableListOf<ReceitaIngrediente>()
-        val lista: List<ReceitaIngredienteDto> = receitaDto.receitaIngredientes
-
-        var i = 0
-        while (receitaDto.receitaIngredientes.size <= i){
-            val ri: ReceitaIngrediente? = dtoParaRi(lista[i], receitaDto)
-            if (ri != null){
-                lri.add(i, ri)
-            }else{
-                return ResponseEntity.badRequest().body(response)
-            }
-            i += 1
-        }
-
         //val receita: Receita = dtoParaReceita(receitaDto)
-        receitaService.salvar(receitaDto, lri)
+        receitaService.salvar(receitaDto)
         response.data = receitaDto
         return ResponseEntity.ok(response)
     }
@@ -77,23 +63,23 @@ class ReceitaController (val receitaService: ReceitaService, val ingredienteServ
     fun atualizar(@RequestBody @Valid atualizacaoDto: AtualizacaoDto, result: BindingResult){
     }
 
-    fun dtoParaRi(receitaIngredienteDto: ReceitaIngredienteDto, receitaDto: ReceitaDto): ReceitaIngrediente?{
-
-        //Como irei achar uma receita q ainda nao foi persistida no banco de dados? primeiro erro.
-        //Segundo erro, caso tente adicionar essa receita da q chegou por Dto, terei q converter e novamente entrarei
-        // num erro de loop infinito por conta da lista de receitas ingredientes.
-        //Posso tentar persistir uma receita com esse id no comedo e depois atualizar ela no banco para ter os itens necessarios
-        val receita: Receita? = receitaService.buscarId(receitaIngredienteDto.receita)
-        val ingrediente: Ingrediente? = ingredienteService.buscarPorId(receitaIngredienteDto.ingrediente)
-        val unidade: Unidade? = unidadeService.buscarPorId(receitaIngredienteDto.unidade)
-
-        if(receita != null && ingrediente != null && unidade != null){
-            val ri: ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente, receita,
-                ingrediente, unidade, receitaIngredienteDto.id)
-            return ri
-        }else{
-            return null
-        }
-
-    }
+//    fun dtoParaRi(receitaIngredienteDto: ReceitaIngredienteDto, receitaDto: ReceitaDto): ReceitaIngrediente?{
+//
+//        //Como irei achar uma receita q ainda nao foi persistida no banco de dados? primeiro erro.
+//        //Segundo erro, caso tente adicionar essa receita da q chegou por Dto, terei q converter e novamente entrarei
+//        // num erro de loop infinito por conta da lista de receitas ingredientes.
+//        //Posso tentar persistir uma receita com esse id no comedo e depois atualizar ela no banco para ter os itens necessarios
+//        val receita: Receita? = receitaService.buscarId(receitaIngredienteDto.receita)
+//        val ingrediente: Ingrediente? = ingredienteService.buscarPorId(receitaIngredienteDto.ingrediente)
+//        val unidade: Unidade? = unidadeService.buscarPorId(receitaIngredienteDto.unidade)
+//
+//        if(receita != null && ingrediente != null && unidade != null){
+//            val ri: ReceitaIngrediente = ReceitaIngrediente(receitaIngredienteDto.quantidadeIngrediente, receita,
+//                ingrediente, unidade, receitaIngredienteDto.id)
+//            return ri
+//        }else{
+//            return null
+//        }
+//
+//    }
 }

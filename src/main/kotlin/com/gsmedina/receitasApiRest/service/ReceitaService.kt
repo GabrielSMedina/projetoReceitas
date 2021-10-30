@@ -11,7 +11,7 @@ interface ReceitaService {
 
     fun buscarPorNome(nome: String): Receita?
 
-    fun salvar(receitaDto: ReceitaDto, receitaIngrediente: List<ReceitaIngrediente>): Receita
+    fun salvar(receitaDto: ReceitaDto): Receita
 
     fun deletar(id: Long)
 

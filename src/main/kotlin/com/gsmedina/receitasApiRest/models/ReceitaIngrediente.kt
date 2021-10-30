@@ -1,6 +1,5 @@
 package com.gsmedina.receitasApiRest.models
 
-import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import java.io.Serializable
 import javax.persistence.*
 
@@ -10,20 +9,20 @@ class ReceitaIngrediente(
     @Column(name = "quantidade_ingrediente")
     val quantidadeIngrediente: Int,
 
-    @ManyToOne
-    @JoinColumn(name = "id_receita")
-    val receita: Receita,
-
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "id_ingrediente")
-    val ingrediente: Ingrediente,
+    val ingrediente: Ingrediente?,
 
     @ManyToOne
     @JoinColumn(name = "id_unidade")
-    val unidade: Unidade,
+    val unidade: Unidade?,
+
+    @ManyToOne
+    @JoinColumn(name = "id_receita")
+    val receita: Receita? = null,
 
     @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long
+    val id: Long? = null
         ): Serializable

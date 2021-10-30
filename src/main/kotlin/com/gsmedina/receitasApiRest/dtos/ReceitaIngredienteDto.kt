@@ -6,12 +6,12 @@ class ReceitaIngredienteDto (
 
     @get:NotEmpty(message = "quantidade nao pode ser vazio")
     val quantidadeIngrediente: Int,
-    @get:NotEmpty(message = "receita nao pode ser vazio")
-    val receita: Long,
+//    @get:NotEmpty(message = "receita nao pode ser vazio")
+//    val receita: Long,
     @get:NotEmpty(message = "ingredinte nao pode ser vazio")
-    val ingrediente: Long,
+    val ingrediente: IngredienteDto,
     @get:NotEmpty(message = "unidade nao pode ser vazio")
     val unidade: Long,
-    @get:NotEmpty(message = "id nao pode ser vazio")
-    val id: Long
+//    @get:NotEmpty(message = "id nao pode ser vazio")
+////    val id: Long
 )

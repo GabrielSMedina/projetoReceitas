@@ -7,7 +7,7 @@ import javax.persistence.*
 @Table(name = "unidades")
 class Unidade (
     @Column(name = "unidade")
-    val nomeUnidade: String,
+    val nomeUnidade: String? = null,
 
     @Column(name = "id")
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

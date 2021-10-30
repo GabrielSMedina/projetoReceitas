@@ -12,5 +12,5 @@ class Ingrediente (
     @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long
+    val id: Long? = null
         ): Serializable
