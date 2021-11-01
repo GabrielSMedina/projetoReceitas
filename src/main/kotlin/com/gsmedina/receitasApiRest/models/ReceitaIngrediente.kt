@@ -22,7 +22,6 @@ class ReceitaIngrediente(
     var receita: Receita? = null,
 
     @Column(name = "id")
-    //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
         ): Serializable

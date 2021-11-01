@@ -10,7 +10,6 @@ class Ingrediente (
     val nomeIngrediente: String,
 
     @Column(name = "id")
-    //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
         ): Serializable

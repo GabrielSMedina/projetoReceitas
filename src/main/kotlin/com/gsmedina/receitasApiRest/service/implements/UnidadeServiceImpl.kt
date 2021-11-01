@@ -1,5 +1,6 @@
 package com.gsmedina.receitasApiRest.service.implements
 
+import com.gsmedina.receitasApiRest.dtos.UnidadeDto
 import com.gsmedina.receitasApiRest.models.Unidade
 import com.gsmedina.receitasApiRest.repositories.UnidadeRepository
 import com.gsmedina.receitasApiRest.service.UnidadeService
@@ -11,11 +12,12 @@ class UnidadeServiceImpl(val unidadeRepository: UnidadeRepository): UnidadeServi
         return unidadeRepository.findByNomeUnidade(nomeUnidade)
     }
 
-    override fun salvar(unidade: Unidade): Unidade {
+    override fun salvar(unidadeDto: UnidadeDto): Unidade {
+        val unidade: Unidade = Unidade(unidadeDto.nomeUnidade)
         return unidadeRepository.save(unidade)
     }
 
-    override fun listarTodasUnidades(): List<Unidade>? {
+    override fun listarTodasUnidades(): List<Unidade> {
         return unidadeRepository.findAll()
     }
 
@@ -25,5 +27,10 @@ class UnidadeServiceImpl(val unidadeRepository: UnidadeRepository): UnidadeServi
 
     override fun deletar(id: Long) {
         return unidadeRepository.deleteById(id)
+    }
+
+    override fun atualizar(unidadeDto: UnidadeDto, id: Long): Unidade {
+        val unidade: Unidade = Unidade(unidadeDto.nomeUnidade, id)
+        return unidadeRepository.save(unidade)
     }
 }

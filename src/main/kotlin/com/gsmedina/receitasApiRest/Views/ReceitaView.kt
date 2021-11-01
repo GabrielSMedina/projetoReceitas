@@ -1,4 +1,4 @@
-package com.gsmedina.receitasApiRest.dtos
+package com.gsmedina.receitasApiRest.Views
 
 import com.gsmedina.receitasApiRest.models.Ingrediente
 import com.gsmedina.receitasApiRest.models.Unidade

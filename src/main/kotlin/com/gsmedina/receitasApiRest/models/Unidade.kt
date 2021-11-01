@@ -7,9 +7,9 @@ import javax.persistence.*
 @Table(name = "unidades")
 class Unidade (
     @Column(name = "unidade")
-    val nomeUnidade: String? = null,
+    val nomeUnidade: String?,
 
     @Column(name = "id")
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long
+    val id: Long? = null
         ): Serializable

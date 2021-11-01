@@ -1,5 +1,6 @@
 package com.gsmedina.receitasApiRest.service.implements
 
+import com.gsmedina.receitasApiRest.dtos.IngredienteDto
 import com.gsmedina.receitasApiRest.models.Ingrediente
 import com.gsmedina.receitasApiRest.repositories.IngredienteRepository
 import com.gsmedina.receitasApiRest.service.IngredienteService
@@ -16,7 +17,7 @@ class IngredienteServiceImpl(val ingredienteRepository: IngredienteRepository): 
         return ingredienteRepository.save(ingrediente)
     }
 
-    override fun listarTodosIngredientes(): List<Ingrediente>? {
+    override fun listarTodosIngredientes(): List<Ingrediente> {
         return ingredienteRepository.findAll()
     }
 
@@ -26,5 +27,10 @@ class IngredienteServiceImpl(val ingredienteRepository: IngredienteRepository): 
 
     override fun buscarPorId(id: Long): Ingrediente? {
         return ingredienteRepository.findById(id).get()
+    }
+
+    override fun atualizar(ingredienteDto: IngredienteDto, id: Long): Ingrediente {
+        val ingrediente: Ingrediente = Ingrediente(ingredienteDto.nomeIngrediente, id)
+        return ingredienteRepository.save(ingrediente)
     }
 }
