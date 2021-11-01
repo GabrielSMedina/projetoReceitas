@@ -12,6 +12,4 @@ class ReceitaIngredienteDto (
     val ingrediente: IngredienteDto,
     @get:NotEmpty(message = "unidade nao pode ser vazio")
     val unidade: Long,
-//    @get:NotEmpty(message = "id nao pode ser vazio")
-////    val id: Long
 )

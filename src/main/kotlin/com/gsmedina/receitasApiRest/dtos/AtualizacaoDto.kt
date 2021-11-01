@@ -5,5 +5,5 @@ class AtualizacaoDto (
     val minutosPreparo: Int,
     val porcoes: Int,
     val modoPreparo: String,
-    val id: Long
+    val receitaIngredienteDto: ReceitaIngredienteDto
         )

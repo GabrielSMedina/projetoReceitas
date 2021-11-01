@@ -6,7 +6,7 @@ interface IngredienteService {
 
     fun buscarPorNome(nomeIngrediente: String): Ingrediente?
 
-    fun salvar(ingrediente: Ingrediente): Ingrediente
+    fun salvar(omeIngrediente: String): Ingrediente
 
     fun listarTodosIngredientes(): List<Ingrediente>?
 

@@ -1,23 +1,16 @@
 package com.gsmedina.receitasApiRest.service.implements
 
-import com.gsmedina.receitasApiRest.dtos.AtualizacaoDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaIngredienteDto
-import com.gsmedina.receitasApiRest.models.Ingrediente
 import com.gsmedina.receitasApiRest.models.Receita
 import com.gsmedina.receitasApiRest.models.ReceitaIngrediente
-import com.gsmedina.receitasApiRest.repositories.IngredienteRepository
-import com.gsmedina.receitasApiRest.repositories.ReceitaIngredienteRepository
 import com.gsmedina.receitasApiRest.repositories.ReceitaRepository
 import com.gsmedina.receitasApiRest.service.IngredienteService
 import com.gsmedina.receitasApiRest.service.ReceitaService
 import com.gsmedina.receitasApiRest.service.UnidadeService
-import org.springframework.data.domain.Page
-import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 
 
-//Classe responsavel por implementar os servicos de nossa interface de servicos
 @Service
 class ReceitaServiceImpl(val receitaRepository: ReceitaRepository, val unidadeService: UnidadeService,
         val ingredienteService: IngredienteService): ReceitaService {
@@ -27,6 +20,7 @@ class ReceitaServiceImpl(val receitaRepository: ReceitaRepository, val unidadeSe
     }
 
     override fun salvar(receitaDto: ReceitaDto): Receita {
+
         val receita = Receita(receitaDto.nomeReceita, receitaDto.minutosPreparo, receitaDto.porcoes,
             receitaDto.modoPreparo, converteReceitaIngrediente(receitaDto.receitaIngredientes))
 
@@ -53,9 +47,16 @@ class ReceitaServiceImpl(val receitaRepository: ReceitaRepository, val unidadeSe
     private fun converteReceitaIngrediente(receitaIngredienteDto: List<ReceitaIngredienteDto>): List<ReceitaIngrediente>{
         val lri= mutableListOf<ReceitaIngrediente>()
 
+
         receitaIngredienteDto.forEach{
+
+            val idIng = ingredienteService.buscarPorNome(it.ingrediente.nomeIngrediente)
+            if(idIng == null){
+                ingredienteService.salvar(it.ingrediente.nomeIngrediente)
+            }
+
             lri += ReceitaIngrediente(quantidadeIngrediente = it.quantidadeIngrediente,
-                ingredienteService.buscarPorId(2), unidadeService.buscarPorId(it.unidade))
+                ingredienteService.buscarPorNome(it.ingrediente.nomeIngrediente), unidadeService.buscarPorId(it.unidade))
         }
 
         return lri

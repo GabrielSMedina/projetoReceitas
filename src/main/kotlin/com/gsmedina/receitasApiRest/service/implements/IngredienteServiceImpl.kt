@@ -11,7 +11,8 @@ class IngredienteServiceImpl(val ingredienteRepository: IngredienteRepository): 
         return ingredienteRepository.findByNomeIngrediente(nomeIngrediente)
     }
 
-    override fun salvar(ingrediente: Ingrediente): Ingrediente {
+    override fun salvar(nomeIngrediente: String): Ingrediente {
+        val ingrediente: Ingrediente = Ingrediente(nomeIngrediente)
         return ingredienteRepository.save(ingrediente)
     }
 

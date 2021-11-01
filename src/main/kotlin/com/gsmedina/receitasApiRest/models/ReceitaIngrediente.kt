@@ -7,22 +7,22 @@ import javax.persistence.*
 @Table(name = "receitas_ingredientes")
 class ReceitaIngrediente(
     @Column(name = "quantidade_ingrediente")
-    val quantidadeIngrediente: Int,
+    var quantidadeIngrediente: Int,
 
     @OneToOne
     @JoinColumn(name = "id_ingrediente")
-    val ingrediente: Ingrediente?,
+    var ingrediente: Ingrediente?,
 
     @ManyToOne
     @JoinColumn(name = "id_unidade")
-    val unidade: Unidade?,
+    var unidade: Unidade?,
 
     @ManyToOne
     @JoinColumn(name = "id_receita")
-    val receita: Receita? = null,
+    var receita: Receita? = null,
 
     @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    var id: Long? = null
         ): Serializable

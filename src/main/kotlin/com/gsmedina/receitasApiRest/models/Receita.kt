@@ -27,5 +27,5 @@ class Receita(
     @Column(name = "id")
     //Geracao automatica do Id e definicao da Primary Key
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    var id: Long? = null
 ): Serializable
