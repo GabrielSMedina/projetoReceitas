@@ -28,10 +28,6 @@ class ReceitaServiceImpl(val receitaRepository: ReceitaRepository, val unidadeSe
         return receitaRepository.save(receita)
     }
 
-    override fun deletar(id: Long) {
-        receitaRepository.deleteById(id)
-    }
-
     override fun buscarId(id: Long): Receita? {
         return receitaRepository.findById(id).get()
     }
@@ -50,13 +46,13 @@ class ReceitaServiceImpl(val receitaRepository: ReceitaRepository, val unidadeSe
 
         receitaIngredienteDto.forEach{
 
-            val idIng = ingredienteService.buscarPorNome(it.ingrediente.nomeIngrediente)
+            var idIng = ingredienteService.buscarPorNome(it.ingrediente.nomeIngrediente)
             if(idIng == null){
-                ingredienteService.salvar(it.ingrediente.nomeIngrediente)
+                 idIng = ingredienteService.salvar(it.ingrediente.nomeIngrediente)
             }
 
             lri += ReceitaIngrediente(quantidadeIngrediente = it.quantidadeIngrediente,
-                ingredienteService.buscarPorNome(it.ingrediente.nomeIngrediente), unidadeService.buscarPorId(it.unidade))
+                idIng, unidadeService.buscarPorId(it.unidade))
         }
 
         return lri

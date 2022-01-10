@@ -1,6 +1,5 @@
 package com.gsmedina.receitasApiRest.controllers
 
-import com.gsmedina.receitasApiRest.dtos.AtualizacaoDto
 import com.gsmedina.receitasApiRest.dtos.ReceitaDto
 import com.gsmedina.receitasApiRest.models.Receita
 import com.gsmedina.receitasApiRest.response.Response
@@ -42,17 +41,6 @@ class ReceitaController (val receitaService: ReceitaService, val ingredienteServ
     @GetMapping("/{id}")
     fun buscar(@PathVariable id:Long): Receita?{
         return receitaService.buscarId(id)
-    }
-
-    @DeleteMapping("/{id}")
-    @Transactional
-    fun deletar(@PathVariable id: Long){
-        receitaService.deletar(id)
-    }
-
-    @PutMapping("/{id}")
-    @Transactional
-    fun atualizar(@RequestBody @PathVariable @Valid atualizacaoDto: AtualizacaoDto, id: Long, result: BindingResult){
     }
 
 }

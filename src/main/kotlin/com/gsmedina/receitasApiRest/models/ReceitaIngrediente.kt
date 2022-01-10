@@ -17,10 +17,6 @@ class ReceitaIngrediente(
     @JoinColumn(name = "id_unidade")
     var unidade: Unidade?,
 
-    @ManyToOne
-    @JoinColumn(name = "id_receita")
-    var receita: Receita? = null,
-
     @Column(name = "id")
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null

@@ -20,8 +20,9 @@ class Receita(
     var modoPreparo: String,
 
 
-    @OneToMany(mappedBy = "receita", orphanRemoval = true)
+    @OneToMany
     @Cascade(CascadeType.ALL)
+    @JoinColumn(name = "id_receita")
     var receitaIngredientes: List<ReceitaIngrediente>,
 
     @Column(name = "id")

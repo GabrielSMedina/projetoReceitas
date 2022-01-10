@@ -9,8 +9,6 @@ interface ReceitaService {
 
     fun salvar(receitaDto: ReceitaDto): Receita
 
-    fun deletar(id: Long)
-
     fun buscarId(id: Long): Receita?
 
     fun listarTodas(): List<Receita>
